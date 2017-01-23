@@ -1,0 +1,20 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - gem install jekyll bundler
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - bundle exec jekyll serve
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - _site/**/*
+  discard-paths: no
