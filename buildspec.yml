@@ -18,3 +18,4 @@ artifacts:
   files:
     - _site/**/*
   discard-paths: no
+ 
