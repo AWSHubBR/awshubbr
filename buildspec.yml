@@ -10,7 +10,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - bundle exec jekyll serve
+      - echo Ruby [`ruby --version`]
+      - echo Gem [`gem --version`]
+      - echo Bundler [`bundle --version`]
+      - echo Jekyll [`jekyll --version`]
+      - bundle exec jekyll build
   post_build:
     commands:
       - echo Build completed on `date`
@@ -18,4 +22,3 @@ artifacts:
   files:
     - _site/**/*
   discard-paths: no
- 
