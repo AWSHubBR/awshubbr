@@ -1,0 +1,49 @@
+{% comment %}
+
+	Editorial by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Posts
+
+	Description:
+
+		Generates a grid of content from post-like elements.
+
+	Example:
+
+		---
+		my_posts_array:
+		- image: /images/pic03.jpg
+			title: Magna feugiat lorem
+			excerpt: Nunc blandit nisi ligula magna dolor sit.
+			url: http://example.com
+		- image: /images/pic01.jpg
+			title: Lorem ipsum dolor
+			excerpt: Nunc blandit nisi ligula magna dolor sit.
+			url: http://example.com
+		---
+
+		{% include components/posts.html posts=page.my_posts_array %}
+
+{% endcomment %}
+
+<!-- Posts -->
+	<div class="posts">
+
+		{% for post in include.posts %}
+
+			<article>
+				<a href="{{ post.url }}" class="image"><img src="{{ post.image }}" alt="" /></a>
+				<h3>{{ post.title }}</h3>
+				<p>{{ post.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+				<ul class="actions">
+					<li><a href="{{ post.url }}" class="button">More</a></li>
+				</ul>
+			</article>
+
+		{% endfor %}
+
+	</div>
