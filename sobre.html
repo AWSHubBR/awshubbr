@@ -1,0 +1,52 @@
+---
+layout: page
+
+
+posts:
+- image: /images/daniloalves.jpeg
+  title: Danilo Alves
+  excerpt: CV
+  url: "https://br.linkedin.com/in/danilo-alves-pmp-13359127/en"
+- image: /images/franciscoedilton.jpeg
+  title: Francisco Edilton
+  excerpt: CV
+  url: "https://br.linkedin.com/in/franciscoed"
+- image: /images/gabrielkope.jpeg
+  title: Gabriel Kope
+  excerpt: CV
+  url: "https://br.linkedin.com/in/gabrielkope/en"
+- image: /images/josegalego.jpeg
+  title: Jose Galego
+  excerpt: CV
+  url: "https://br.linkedin.com/in/josegalego/en"
+
+
+---
+
+{% comment %}
+
+	Name:
+
+	About
+	Description:
+
+		Página com a lista dos colaboradores
+
+{% endcomment %}
+
+<header class="main">
+	<center>
+		<h1>Sobre o AWS HUB</h1>
+	</center>
+</header>
+
+<hr class="major" />
+<p>
+  O AWS HUB é um site feito por membros da Comunidade de usuários AWS. Os comentários expostos aqui não necessariamente refletem as opiniões e posições da AWS.
+</p>
+
+<section>
+	<header class="major">
+	</header>
+	{% include components/posts.html posts=page.posts %}
+</section>
