@@ -2,9 +2,7 @@
 title: AWS HUB
 tagline: o site da comunidade AWS no Brasil
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Site da comunidade AWS com Blog, Tutoriais, Meetups, Oportunidades e mais!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://awshub.com.br" # the base hostname & protocol for your site
 twitter_username: awscloud
