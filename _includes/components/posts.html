@@ -39,9 +39,33 @@
 				<a href="{{ post.url }}" class="image"><img src="{{ post.image }}" alt="" /></a>
 				<h3>{{ post.title }}</h3>
 				<p>{{ post.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+				{% if post.url %}
 				<ul class="actions">
 					<li><a href="{{ post.url }}" class="button">Mais</a></li>
 				</ul>
+				{% endif %}
+
+				{% if post.twitter %}
+				<ul class="icon">
+					<li><a href="{{ post.post.twitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				</ul>
+				{% endif %}
+				{% if post.linkedin %}
+				<ul class="icon">
+					<li><a href="{{ post.post.linkedin }}" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+				</ul>
+				{% endif %}
+				{% if post.github %}
+				<ul class="icon">
+					<li><a href="{{ post.post.github }}" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				{% endif %}
+				{% if post.facebook %}
+				<ul class="icon">
+					<li><a href="{{ post.post.facebook }}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				</ul>
+				{% endif %}
+
 			</article>
 
 		{% endfor %}
