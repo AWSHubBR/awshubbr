@@ -33,6 +33,9 @@
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie8.css" /><![endif]-->
+		{% if page.form %}
+			<script src='https://www.google.com/recaptcha/api.js'></script>
+		{% endif %}
 	</head>
 	<body>
 
