@@ -27,7 +27,7 @@ title: Blog
 
 <!-- Post list -->
 	{% for post in paginator.posts %}
-		{% if post.type contains 'blog' %}
+
 			<article>
 				<header>
 					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -43,7 +43,6 @@ title: Blog
 			{% unless forloop.last %}
 				<hr class="major" />
 			{% endunless %}
-		{% endif %}
 	{% endfor %}
 
 	<!-- Pagination -->
