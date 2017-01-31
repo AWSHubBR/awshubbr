@@ -1,6 +1,6 @@
 # Site settings
 title: AWS HUB
-tagline: o site da comunidade AWS no Brasil
+tagline: AWSHUB, a comidade AWS se encontra aqui!
 description: > # this means to ignore newlines until "baseurl:"
   Site da comunidade AWS com Blog, Tutoriais, Meetups, Oportunidades e mais!
 baseurl: "" # the subpath of your site, e.g. /blog
