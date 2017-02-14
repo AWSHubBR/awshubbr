@@ -2,47 +2,48 @@
 layout: default
 
 features:
-- icon: fa-diamond
-  title: Portitor ullamcorper
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-- icon: fa-paper-plane
-  title: Sapien veroeros
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-- icon: fa-rocket
-  title: Quam lorem ipsum
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-- icon: fa-signal
-  title: Sed magna finibus
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+- icon: fa-rss-square
+  title: Blog
+  excerpt: Sabe aquele blog maroto do Jeff Barr’s ? Agora você pode ler em português !
+  url: "blog/"
+- icon: fa-book
+  title: Tutoriais
+  excerpt: Tutoriais que vão direto ao ponto ! Mão na massa !
+  url: "tutoriais.html"
+- icon: fa-newspaper-o
+  title: Newsletter
+  excerpt: Notícias atualizadas, tendências do mundo cloud, eventos e muito mais. Assine a newsletter e fique por dento !
+  url: "news.html"
+- icon: fa-trophy
+  title: 99 Challenge
+  excerpt: Que tal tirar uma das certificações da AWS de graça? Esta é a proposta do 99 Challenge, certificar 99 pessoas em AWS até o final de 2017 !
+  url: "99challenge.html"
+
 
 posts:
-- image: /images/pic01.jpg
-  title: Interdum aenean
-  excerpt: lalala ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  url: "#"
-- image: /images/pic02.jpg
-  title: Nulla amet dolore
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  url: "#"
-- image: /images/pic03.jpg
-  title: Tempus ullamcorper
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  url: "#"
-- image: /images/pic04.jpg
-  title: Sed etiam facilis
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  url: "#"
-- image: /images/pic05.jpg
-  title: Feugiat lorem aenean
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  url: "#"
+- image: /images/meetuplogo.png
+  title: Meetups
+  excerpt: Comunidades Cloud pelo Brasil. Participe, contribua e fortaleça sua comunidade local !
+  url: "meetups.html"
+- image: /images/certificados.jpg
+  title: Certificados
+  excerpt: Se dedicou, passou, entrou no Hall of Fame ! Lista de profissionais certificados !
+  url: "certificados.html"
+- image: /images/oportunidades.png
+  title: Oportunidades
+  excerpt: Se você sabe que Nuvem não é apenas aquela fumacinha branca lá no céu, existe um mundo de oportunidades para você. Encontre a sua aqui !
+  url: "oportunidades.html"
+- image: /images/sobre.png
+  title: Sobre
+  excerpt: Como eu sugiro, reclamo, contribuo com o AWSHUB? Entre em contato conosco !
+  url: "sobre.html"
+
 
 ---
 
 {% comment %}
 
-	Editorial by Pixelarity
-	pixelarity.com | hello@pixelarity.com
+
 	License: pixelarity.com/license
 
 	Name:
@@ -59,24 +60,21 @@ posts:
 	<section id="banner">
 		<div class="content">
 			<header>
-				<h1>Hi, I’m Editorial<br />
-				by Pixelarity</h1>
-				<p>A urna sed morbi natoque enim cubilia</p>
+				<h1>Bem vindos ao AWSHUB !</h1>
+				<p>É hora de se conectar à Nuvem !!! </p>
 			</header>
-			<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-			<ul class="actions">
-				<li><a href="#" class="button big">Learn More</a></li>
-			</ul>
+			<p>Blog, Tutoriais, Newsletter, Meetups, 99Challenge, Certificados, Oportunidades. Tudo em um só lugar !</p>
+
 		</div>
 		<span class="image object">
-			<img src="{{ site.baseurl }}/images/pic10.jpg" alt="" />
+			<img src="{{ site.baseurl }}/images/nuvemawshome.png" alt="" />
 		</span>
 	</section>
 
 <!-- Section -->
 	<section>
 		<header class="major">
-			<h2>Erat lacinia</h2>
+			<h2>Aprenda +</h2>
 		</header>
 		{% include components/features.html features=page.features %}
 	</section>
@@ -84,7 +82,7 @@ posts:
 <!-- Section -->
 	<section>
 		<header class="major">
-			<h2>Ipsum sed dolor</h2>
+			<h2>Comunidade</h2>
 		</header>
 		{% include components/posts.html posts=page.posts %}
 	</section>
