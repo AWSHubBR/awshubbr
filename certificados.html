@@ -1,5 +1,31 @@
 ---
 layout: page
+
+posts:
+- nome: José Galego
+  twitter: "https://twitter.com"
+  linkedin: "https://br.linkedin.com/in/danilo-alves-pmp-13359127/en"
+  github: "https://github.com"
+  associate: developer architect sysops
+  professional: architect devops
+  expert: networking bigdata security
+  verified: yes
+- nome: Francisco Edilton
+  twitter: "https://twitter.com"
+  linkedin: "https://br.linkedin.com/in/danilo-alves-pmp-13359127/en"
+  github: "https://github.com"
+  associate: architect
+  professional:
+  expert:
+  verified:
+- nome: Glauber Galego
+  twitter: "https://twitter.com"
+  linkedin: "https://br.linkedin.com/in/danilo-alves-pmp-13359127/en"
+  github: "https://github.com"
+  associate: architect
+  professional: architect
+  expert:
+  verified:
 ---
 
 {% comment %}
@@ -30,6 +56,11 @@ layout: page
 	<img src="{{ site.baseurl }}/images/awscertified.png" alt="" />
 </div>
 <br />
+
+<section>
+	{% include components/hof.html posts=page.posts %}
+</section>
+
 
 <p>
 A galeria dos certificados é um local, para os brasileiros que possuem certificação sejam listados e divulgados.
