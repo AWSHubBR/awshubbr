@@ -86,14 +86,15 @@
 				<td>
 					{% if post.professional %}
 
-						<center>
+						<ul class="icons">
 							{% if post.professional contains 'architect' %}
-								<i class="fa fa-certificate" aria-hidden="true"></i>
+								<li><img src="images/architect.png" style="max-width: 90%; height: 80%;"></li>
 							{% endif %}
 							{% if post.professional contains 'devops' %}
-								<i class="fa fa-certificate" aria-hidden="true"></i>
+								<li><img src="images/devops.png"></li>
 							{% endif %}
-						</center>
+						</ul>
+
 
 					{% endif %}
 
@@ -117,22 +118,25 @@
 				</td>
 				<td>
 
+					<ul class="icons">
+
 
 					{% if post.twitter %}
 
-						<a href="{{ post.twitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a>
+						<li><a href="{{ post.twitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 
 					{% endif %}
 					{% if post.linkedin %}
 
-						<a href="{{ post.linkedin }}" class="icon fa-linkedin"><span class="label">Linkedin</span></a>
+						<li><a href="{{ post.linkedin }}" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 
 					{% endif %}
 					{% if post.github %}
 
-						<a href="{{ post.github }}" class="icon fa-github"><span class="label">GitHub</span></a>
+						<li><a href="{{ post.github }}" class="icon fa-github"><span class="label">GitHub</span></a></li>
 
 					{% endif %}
+					</ul>
 				</td>
 				<td>
 					{% if post.verified %}
