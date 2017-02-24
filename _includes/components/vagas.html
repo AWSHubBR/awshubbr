@@ -51,7 +51,7 @@
 				</th>
 			  </tr>
 
-		{% assign sorted_posts = (include.posts | sort: 'nome') %}
+		{% assign sorted_posts = (include.posts | sort: 'date' | reverse) %}
 		{% for post in sorted_posts %}
 		{% assign posttime = (post.date | date: '%s') %}
 		{% assign nowtime = (site.time | date: '%s' | minus: posttime) %}
@@ -72,7 +72,7 @@
 				<td style="text-align:center">
 					{{ post.cidade }}
 				</td>
-	
+
 				<td style="text-align:center">
 					{% if post.verified %}
 
