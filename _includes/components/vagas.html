@@ -47,10 +47,6 @@
 						Cidade
 				</th>
 				<th style="text-align:center">
-						Link
-				</th>
-
-				<th style="text-align:center">
 						Verificado
 				</th>
 			  </tr>
@@ -71,16 +67,12 @@
 							{{ post.empresa }}
 				</td>
 				<td style="text-align:center">
-					{{ post.vaga }}
+					<a href="{{ post.link }}">{{post.vaga}}</a>
 				</td>
 				<td style="text-align:center">
 					{{ post.cidade }}
 				</td>
-				<td style="text-align:center">
-					<a href="{{ post.link }}">{{post.vaga}}</a>
-
-				</td>
-
+	
 				<td style="text-align:center">
 					{% if post.verified %}
 
