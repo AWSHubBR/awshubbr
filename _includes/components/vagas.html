@@ -1,0 +1,98 @@
+{% comment %}
+
+	Editorial by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Posts
+
+	Description:
+
+		Generates a grid of content from post-like elements.
+
+	Example:
+
+		---
+		my_posts_array:
+		- image: /images/pic03.jpg
+			title: Magna feugiat lorem
+			excerpt: Nunc blandit nisi ligula magna dolor sit.
+			url: http://example.com
+		- image: /images/pic01.jpg
+			title: Lorem ipsum dolor
+			excerpt: Nunc blandit nisi ligula magna dolor sit.
+			url: http://example.com
+		---
+
+		{% include components/posts.html posts=page.my_posts_array %}
+
+{% endcomment %}
+
+<!-- Posts -->
+	<div class="posts" style="margin-left: 0px;">
+
+
+			<table vertical-align="center">
+
+				<tr>
+				<th>
+						Empresa
+				</th>
+				<th style="text-align:center">
+						Vaga
+				</th>
+				<th style="text-align:center">
+						Cidade
+				</th>
+				<th style="text-align:center">
+						Link
+				</th>
+
+				<th style="text-align:center">
+						Verificado
+				</th>
+			  </tr>
+
+		{% assign sorted_posts = (include.posts | sort: 'nome') %}
+		{% for post in sorted_posts %}
+		{% assign posttime = (post.date | date: '%s') %}
+		{% assign nowtime = (site.time | date: '%s' | minus: posttime) %}
+		{% assign expire = (nowtime | divided_by: 86400 ) %}
+
+
+
+
+
+		{% if expire <= 14 %}
+			<tr>
+				<td>
+							{{ post.empresa }}
+				</td>
+				<td style="text-align:center">
+					{{ post.vaga }}
+				</td>
+				<td style="text-align:center">
+					{{ post.cidade }}
+				</td>
+				<td style="text-align:center">
+					<a href="{{ post.link }}">{{post.vaga}}</a>
+
+				</td>
+
+				<td style="text-align:center">
+					{% if post.verified %}
+
+						<i class="fa fa-check-circle" aria-hidden="true"></i>
+
+					{% endif %}
+				</td>
+			</tr>
+
+		{% endif %}
+		{% endfor %}
+			</table>
+
+
+	</div>

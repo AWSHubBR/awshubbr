@@ -1,5 +1,34 @@
 ---
 layout: page
+
+posts:
+- empresa: VivaReal
+  vaga: "Engenheira de Software Backend"
+  link: "https://jobs.lever.co/vivareal/c391f5c1-a9c6-42de-b9c2-0f9c91f82c2d"
+  verified: yes
+  cidade: "São Paulo"
+  date: 2017-02-23T10:20:00Z
+- empresa: VivaReal
+  vaga: "Engenheiro de Dados"
+  link: "https://jobs.lever.co/vivareal/3ce45ff6-dd2e-4815-b789-f366cac6611c"
+  verified: yes
+  cidade: "São Paulo"
+  date: 2016-03-23T10:20:00Z
+- empresa: VivaReal
+  vaga: "Engenheiro de Plataforma"
+  link: "https://jobs.lever.co/vivareal/b159b0e1-f5be-4129-a5ce-be68d2305e04"
+  verified: yes
+  cidade: "São Paulo"
+  date: 2016-03-23T10:20:00Z
+- empresa: VivaReal
+  vaga: "Engenheiro de Software Frontend"
+  link: "https://jobs.lever.co/vivareal/6c846e8e-4b35-4399-94c2-f04510f78bf2"
+  verified: yes
+  cidade: "São Paulo"
+  date: 2016-03-23T10:20:00Z
+
+
+
 ---
 
 {% comment %}
@@ -24,6 +53,11 @@ layout: page
 </header>
 
 
+	<section>
+		{% include components/vagas.html posts=page.posts %}
+	</section>
+
+
 <div class="box alt">
 	<div class="row 50% uniform">
 			<div align="center" class="4u"></div>
@@ -39,12 +73,11 @@ layout: page
 Envie a sua oportunidades para nós. Que nós publicaremos aqui, junto com a sua referência.
 Entre em contato com Danilo Alves, Francisco Edilton ou José Galego no email <a href="mailto:{{ site.email }}">awsmeetup@gmail.com</a> enviando as seguintes informações:
 <ul>
-  <li>Tipo da vaga</li>
+  <li>Empresa</li>
 	<li>Cargo</li>
-	<li>Descrição da Vaga</li>
-	<li>Empresa</li>
 	<li>Local de Trabalho</li>
-	<li>Email (com o domínio da empresa)</li>
+	<li>Link para a vaga</li>
+	<li>Email (com o domínio da empresa)(não será divulgado)</li>
 	<li>Nome do contato(não será divulgado)</li>
 </ul>
 
