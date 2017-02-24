@@ -40,19 +40,19 @@
 				<th>
 						Nome
 				</th>
-				<th>
+				<th style="text-align:center">
 						Certificação<br /> Associate
 				</th>
-				<th>
+				<th style="text-align:center">
 						Certificação<br /> Professional
 				</th>
-				<th>
+				<th style="text-align:center">
 						Certificação<br /> Expert
 				</th>
-				<th>
+				<th style="text-align:center">
 						Redes<br /> Sociais
 				</th>
-				<th>
+				<th style="text-align:center">
 						Verificado
 				</th>
 			  </tr>
@@ -66,32 +66,30 @@
 				<td>
 					{{ post.nome }}
 				</td>
-				<td>
+				<td style="text-align:center">
 					{% if post.associate %}
 
-						<center>
 							{% if post.associate contains 'developer' %}
-								<span>Developer</span><br />
+								<span><b>D&nbsp;</b></span>
 							{% endif %}
 							{% if post.associate contains 'sysops' %}
-								<span>Sysops</span><br />
+								<span><b>S&nbsp;</b></span>
 							{% endif %}
 							{% if post.associate contains 'architect' %}
-								<span>Architect</span>
+								<span><b>A&nbsp;</b></span>
 							{% endif %}
-						</center>
 
 					{% endif %}
 				</td>
-				<td>
+				<td style="text-align:center">
 					{% if post.professional %}
 
 						<ul class="icons">
 							{% if post.professional contains 'architect' %}
-								<li><img src="images/architect.png" style="max-width: 90%; height: 80%;"></li>
+								<span><b>A&nbsp;</b></span>
 							{% endif %}
 							{% if post.professional contains 'devops' %}
-								<li><img src="images/devops.png"></li>
+								<span><b>D&nbsp;</b></span>
 							{% endif %}
 						</ul>
 
@@ -99,24 +97,24 @@
 					{% endif %}
 
 				</td>
-				<td>
+				<td style="text-align:center">
 					{% if post.expert %}
 
 						<center>
 							{% if post.expert contains 'bigdata' %}
-								<i class="fa fa-certificate" aria-hidden="true"></i>
+								<span title="Big Data"><b>B&nbsp;</b></span>
 							{% endif %}
 							{% if post.expert contains 'security' %}
-								<i class="fa fa-certificate" aria-hidden="true"></i>
+								<span title="Security"><b>S&nbsp;</b></span>
 							{% endif %}
 							{% if post.expert contains 'networking' %}
-								<i class="fa fa-certificate" aria-hidden="true"></i>
+								<span title="Advanced Networking"><b>N&nbsp;</b></span>
 							{% endif %}
 						</center>
 
 					{% endif %}
 				</td>
-				<td>
+				<td style="text-align:center">
 
 					<ul class="icons">
 
@@ -138,10 +136,10 @@
 					{% endif %}
 					</ul>
 				</td>
-				<td>
+				<td style="text-align:center">
 					{% if post.verified %}
 
-						<center><i class="fa fa-check-circle" aria-hidden="true"></i></center>
+						<i class="fa fa-check-circle" aria-hidden="true"></i>
 
 					{% endif %}
 				</td>
@@ -150,4 +148,27 @@
 
 		{% endfor %}
 			</table>
+
+			<div>
+				 Legenda:
+				 <ul>
+					<li>Associate:
+					<ul>
+						<li>A - Solutions Architect</li>
+						<li>S - Sysops Administrator</li>
+						<li>D - Developer</li>
+					</ul></li>
+					<li>Professional:
+					<ul>
+						<li>A - Solutions Architect</li>
+						<li>D - Devops Engineer</li>
+					</ul></li>
+					<li>Expert
+					<ul>
+						<li>B - Big Data</li>
+						<li>N - Advanded Networking</li>
+						<li>S - Security</li>
+					</ul></li>
+				 </ul>
+			</div>
 	</div>
