@@ -36,6 +36,9 @@
 		{% if page.form %}
 			<script src='https://www.google.com/recaptcha/api.js'></script>
 		{% endif %}
+		{% if site.google_analytics %}
+			{% include analytics.html %}
+		{% endif %}
 	</head>
 	<body>
 
