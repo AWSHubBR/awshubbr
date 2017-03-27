@@ -1,0 +1,46 @@
+{% comment %}
+
+	Frame para o countdown do 99 Challenge
+{% endcomment %}
+
+<!-- Posts -->
+	<div class="posts" style="margin-left: 0px;">
+
+
+			<table vertical-align="center">
+
+				<tr>
+				<th>
+						Número
+				</th>
+				<th style="text-align:center">
+						Nome
+				</th>
+				<th style="text-align:center">
+						Certificação
+				</th>
+			  </tr>
+		{% assign contador = 0 %}
+		{% for post in include.posts %}
+
+
+		  {% assign contador=contador | plus:1 %}
+			<tr>
+				<td>
+							{{ contador }}
+				</td>
+				<td style="text-align:center">
+					{{post.name}}
+				</td>
+				<td style="text-align:center">
+					{{ post.certification }}
+				</td>
+
+			</tr>
+
+
+		{% endfor %}
+			</table>
+
+
+	</div>
